@@ -9,8 +9,10 @@ In order to check how this was configured, read the `/etc/modules` file in this 
 2. `sudo apt-get install lirc-dev`
 3. edit `/etc/modules` to look similar to the one in this repo.
 4. Open `/boot/config.txt` and make sure that *lirc-rpi* is not commented.
+
 ..*`dtoverlay=lirc-rpi`
 
-Now run the following commands in exactly this order...
+Now run the following commands in exactly this order
+
 1. `sudo modprobe lirc_rpi` (this should run successfully - no output to stdout)
 2. `mode2 -d /dev/lirc0`
